@@ -43,7 +43,6 @@
 .icon-wrap {
   width: 64px; height: 64px;
   margin: 0 auto 2rem;
-  position: relative;
   animation: floatUp 0.8s ease both;
 }
 
@@ -65,12 +64,6 @@
   align-items: center;
   justify-content: center;
 }
-
-.film-icon {
-  width: 22px; height: 18px;
-  position: relative;
-}
-.film-icon svg { width: 100%; height: 100%; }
 
 @keyframes rotateBorder {
   from { transform: rotate(0deg); }
@@ -127,10 +120,7 @@
   animation: fadeSlide 0.8s 0.55s ease both;
 }
 
-.dots-row {
-  display: flex;
-  gap: 5px;
-}
+.dots-row { display: flex; gap: 5px; }
 .dot {
   width: 5px; height: 5px;
   border-radius: 50%;
@@ -148,14 +138,12 @@
 .status-text {
   font-family: 'Inter', sans-serif;
   font-size: 12px;
-  font-weight: 400;
   color: rgba(255,255,255,0.25);
   letter-spacing: 0.05em;
 }
 
 .divider {
-  width: 1px;
-  height: 40px;
+  width: 1px; height: 40px;
   background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);
   margin: 0 auto 2.5rem;
   animation: fadeSlide 0.8s 0.65s ease both;
@@ -164,7 +152,6 @@
 .cta-label {
   font-family: 'Inter', sans-serif;
   font-size: 11px;
-  font-weight: 400;
   letter-spacing: 0.15em;
   color: rgba(255,255,255,0.2);
   text-transform: uppercase;
@@ -172,35 +159,26 @@
   animation: fadeSlide 0.8s 0.7s ease both;
 }
 
-.btn-wrap {
-  animation: fadeSlide 0.8s 0.8s ease both;
-}
-
-.dl-btn {
+/* ✅ Not a button — just a styled label, no cursor, no hover action */
+.dl-label {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.05em;
-  color: #111318;
-  background: #f0c060;
-  border: none;
+  letter-spacing: 0.04em;
+  color: #f0ece4;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
   padding: 14px 32px;
   border-radius: 40px;
-  cursor: pointer;
-  transition: all 0.25s ease;
+  cursor: default;
+  user-select: none;
+  animation: fadeSlide 0.8s 0.8s ease both;
 }
 
-.dl-btn:hover {
-  background: #f7d080;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255,180,60,0.2);
-}
-.dl-btn:active { transform: scale(0.97); }
-
-.dl-btn svg { width: 16px; height: 16px; }
+.dl-label svg { width: 15px; height: 15px; opacity: 0.6; }
 
 .footnote {
   font-family: 'Inter', sans-serif;
@@ -223,33 +201,28 @@
 
 <div class="page">
   <div class="bg-glow"></div>
-
   <div class="card">
 
     <div class="icon-wrap">
       <div class="icon-circle">
         <div class="icon-circle-inner">
-          <div class="film-icon">
-            <svg viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="0.5" y="0.5" width="21" height="17" rx="2" stroke="rgba(255,180,60,0.6)" stroke-width="1"/>
-              <rect x="2" y="2" width="4" height="3" rx="0.5" fill="rgba(255,180,60,0.3)"/>
-              <rect x="9" y="2" width="4" height="3" rx="0.5" fill="rgba(255,180,60,0.3)"/>
-              <rect x="16" y="2" width="4" height="3" rx="0.5" fill="rgba(255,180,60,0.3)"/>
-              <rect x="2" y="13" width="4" height="3" rx="0.5" fill="rgba(255,180,60,0.3)"/>
-              <rect x="9" y="13" width="4" height="3" rx="0.5" fill="rgba(255,180,60,0.3)"/>
-              <rect x="16" y="13" width="4" height="3" rx="0.5" fill="rgba(255,180,60,0.3)"/>
-              <circle cx="11" cy="9" r="2.5" stroke="rgba(255,180,60,0.5)" stroke-width="1"/>
-              <polygon points="10,7.8 10,10.2 13,9" fill="rgba(255,180,60,0.6)"/>
-            </svg>
-          </div>
+          <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="21" height="17" rx="2" stroke="rgba(255,180,60,0.6)" stroke-width="1"/>
+            <rect x="2" y="2" width="4" height="3" rx="0.5" fill="rgba(255,180,60,0.3)"/>
+            <rect x="9" y="2" width="4" height="3" rx="0.5" fill="rgba(255,180,60,0.3)"/>
+            <rect x="16" y="2" width="4" height="3" rx="0.5" fill="rgba(255,180,60,0.3)"/>
+            <rect x="2" y="13" width="4" height="3" rx="0.5" fill="rgba(255,180,60,0.3)"/>
+            <rect x="9" y="13" width="4" height="3" rx="0.5" fill="rgba(255,180,60,0.3)"/>
+            <rect x="16" y="13" width="4" height="3" rx="0.5" fill="rgba(255,180,60,0.3)"/>
+            <circle cx="11" cy="9" r="2.5" stroke="rgba(255,180,60,0.5)" stroke-width="1"/>
+            <polygon points="10,7.8 10,10.2 13,9" fill="rgba(255,180,60,0.6)"/>
+          </svg>
         </div>
       </div>
     </div>
 
     <p class="sorry-label">We are Sorry</p>
-
     <h1 class="headline">This video is<br><em>not available</em> yet</h1>
-
     <p class="desc">
       We are working hard and<br>
       <strong>keep searching for it.</strong><br>
@@ -269,14 +242,12 @@
 
     <p class="cta-label">For now, you can</p>
 
-    <div class="btn-wrap">
-      <button class="dl-btn" onclick="alert('Starting download...')">
-        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 2v8M5 7l3 3 3-3" stroke="#111318" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M2 12h12" stroke="#111318" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        Download &amp; Watch
-      </button>
+    <div class="dl-label">
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 2v8M5 7l3 3 3-3" stroke="#f0ece4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 12h12" stroke="#f0ece4" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      Download &amp; Watch
     </div>
 
     <p class="footnote">Free · No signup required · Watch offline</p>
